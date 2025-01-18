@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:travel_app/features/trips/data/models/trip_model.dart';
@@ -12,7 +13,7 @@ void main() async {
   await Hive.initFlutter((await getApplicationDocumentsDirectory()).path);
   Hive.registerAdapter(TripModelAdapter());
   await Hive.openBox<TripModel>('trips');
-  runApp(const MyApp());
+  runApp(const ProviderScope(child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
