@@ -1,10 +1,10 @@
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:travel_app/features/trips/data/models/trip_model.dart';
 
-class TripLocalDatasource {
+class TripLocalDataSource {
   final Box<TripModel> tripBox;
 
-  TripLocalDatasource(this.tripBox);
+  TripLocalDataSource(this.tripBox);
 
   List<TripModel> getTrips() {
     return tripBox.values.toList();
