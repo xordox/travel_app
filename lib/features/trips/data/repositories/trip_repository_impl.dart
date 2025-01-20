@@ -32,15 +32,5 @@ class TripRepositoryImpl implements TripRepository {
     }
   }
 
-  // @override
-  // Future<Either<Error, List<Trip>>> getTrips() async{
-  //   try{
-  //     final tripModels = localDatasource.getTrips();
-  //     List<Trip> res = tripModels.map((trip) =>trip.toEntity()).toList();
-  //     return Right(res);
-  //   }
-  //   catch(e){
-  //     return Left(LocalDatasourceError(e.toString()));
-  //   }
-  // }
+ 
 }
